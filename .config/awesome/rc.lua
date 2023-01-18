@@ -629,6 +629,6 @@ beautiful.useless_gap = 4
 
 --Autostarting apps
 awful.spawn.with_shell("picom")
-awful.spawn.with_shell("feh --bg-scale ~/wallpapers/forest-fog.jpg")
+awful.spawn.with_shell("feh --bg-scale .config/awesome/wallpapers/forest-fog.jpg")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
