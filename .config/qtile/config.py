@@ -279,7 +279,7 @@ wmname = "qtile"
 def autostart():
     processes = [
         ['picom', '-b'],
-        ['feh', '--bg-scale', '/home/zhawitche/wallpapers/forest-fog.jpg'],
+        ['feh', '--bg-scale', '.config/qtile/wallpapers/forest-fog.jpg'],
         ['volumeicon'],
         ['/usr/lib/polkit-gnome/polkit-gnome-authentification-agent=1'],
     ]
