@@ -1,4 +1,4 @@
-from libqtile import bar, layout, widget
+rt bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -13,9 +13,11 @@ from qtile_extras.widget.decorations import RectDecoration
 
 mod = "mod4"
 terminal = "alacritty"
-browser1 = "brave"
-browser2 = "librewolf"
-ide = "vscodium"
+browser2 = "brave"
+browser1 = "librewolf"
+editor_cmd= "alacritty -e vim"
+ide = "emacs"
+#ide = "vscodium"
 file_manager = "thunar"
 run_prompt ="dmenu_run"
 
@@ -52,13 +54,15 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "shift"], "q", lazy.spawn("archlinux-logout"), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "m", lazy.window.toggle_maximize(), desc="Toggle maximize"),  
     Key([mod], "n", lazy.window.toggle_minimize(), desc="Toggle minimize"),  
-    #Application launchers
+    # Application launchers
     Key([mod, "shift"], "Return", lazy.spawn("dmenu_run"), desc="Run dmenu"),
-    Key([mod, "shift"], "e", lazy.spawn(ide), desc="Open vscodium"),
+    Key([mod, "shift"], "e", lazy.spawn(ide), desc="Open ide gui"),
+    Key([mod, "shift"], "v", lazy.spawn(editor_cmd), desc="Open vim in a terminal"),
     Key([mod], "o", lazy.spawn("libreoffice"), desc="Open libreoffice"),
     Key([mod, "shift"], "f", lazy.spawn(file_manager), desc="Open thunar"),
     Key([mod], "w", lazy.spawn(browser1), desc="Open brave"),
@@ -99,7 +103,7 @@ layouts = [
         border_width= 3,
         margin = 5,
         border_focus = "#232A2E",
-        border_normal = "#4F585E",
+        border_normal = "#262626",
         ),
     layout.Max(
         border_focus = "#232A2E",
@@ -278,10 +282,9 @@ wmname = "qtile"
 @hook.subscribe.startup_once
 def autostart():
     processes = [
-        ['picom', '-b'],
-        ['feh', '--bg-scale', '.config/qtile/wallpapers/forest-fog.jpg'],
-        ['volumeicon'],
-        ['/usr/lib/polkit-gnome/polkit-gnome-authentification-agent=1'],
+        ['sh', '.config/autostart.sh'],
+        ['feh', '--bg-scale', '/home/zhawitche/.config/qtile/wallpapers/forest-fog.jpg'],
+        ['swaybg', '-i', '/home/zhawitche/.config/qtile/wallpapers/forest-fog.jpg'],
     ]
 
     for p in processes:
