@@ -1,4 +1,4 @@
-rt bar, layout, widget
+from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -59,6 +59,7 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "m", lazy.window.toggle_maximize(), desc="Toggle maximize"),  
     Key([mod], "n", lazy.window.toggle_minimize(), desc="Toggle minimize"),  
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),  
     # Application launchers
     Key([mod, "shift"], "Return", lazy.spawn("dmenu_run"), desc="Run dmenu"),
     Key([mod, "shift"], "e", lazy.spawn(ide), desc="Open ide gui"),
@@ -68,7 +69,7 @@ keys = [
     Key([mod], "w", lazy.spawn(browser1), desc="Open brave"),
     Key([mod, "shift"], "w", lazy.spawn(browser2), desc="Open librewolf"),
     Key([mod, "shift"], "m", lazy.spawn("deadbeef"), desc="Open deadbeef"),
-    Key([mod, "shift"], "d", lazy.spawn("discord"), desc="Open discord"),
+    Key([mod, "shift"], "d", lazy.spawn("webcord"), desc="Open discord"),
     Key([], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot"),
 ]
 
@@ -101,7 +102,7 @@ for i in groups:
 layouts = [
     layout.Columns(
         border_width= 3,
-        margin = 5,
+        margin = 4,
         border_focus = "#232A2E",
         border_normal = "#262626",
         ),
