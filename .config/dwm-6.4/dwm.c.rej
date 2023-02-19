@@ -1,0 +1,20 @@
+--- dwm.c
++++ dwm.c
+@@ -118,6 +119,8 @@ struct Monitor {
+ 	int nmaster;
+ 	int num;
+ 	int by;               /* bar geometry */
++	int btw;              /* width of tasks portion of bar */
++	int bt;               /* number of tasks */
+ 	int mx, my, mw, mh;   /* screen size */
+ 	int wx, wy, ww, wh;   /* window area  */
+ 	unsigned int seltags;
+@@ -721,7 +748,7 @@ dirtomon(int dir)
+ void
+ drawbar(Monitor *m)
+ {
+-	int x, w, tw = 0;
++	int x, w, tw = 0, n = 0, scm;
+ 	int boxs = drw->fonts->h / 9;
+ 	int boxw = drw->fonts->h / 6 + 2;
+ 	unsigned int i, occ = 0, urg = 0;
