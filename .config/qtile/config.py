@@ -1,5 +1,5 @@
 from libqtile import bar, layout, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Screen, KeyChord
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from libqtile import hook, layout, bar, widget
@@ -71,6 +71,14 @@ keys = [
     Key([mod, "shift"], "m", lazy.spawn("deadbeef"), desc="Open deadbeef"),
     Key([mod, "shift"], "d", lazy.spawn("webcord"), desc="Open discord"),
     Key([], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot"),
+    #KeyChords
+    KeyChord([mod], "e", [
+        Key([], "e", lazy.spawn("element-desktop")),
+        Key([], "g", lazy.spawn("gdlauncher")),
+        Key([], "v", lazy.spawn("alacritty -e vim")),
+        Key([], "t", lazy.spawn("transmission-gtk")),
+
+    ])
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -196,7 +204,7 @@ screens = [
                     **powerline_left,
                 ),
                 widget.TaskList(
-                    icon_size = 20,
+                    icon_size = 0,
                     background = colors[6],
                     **powerline,
                 ),
@@ -280,11 +288,18 @@ wl_input_rules = None
 
 wmname = "qtile"
 
+#W.I.P.
+#@hook.subscribe.client_new
+#def client_new(client):
+#    if client.name.lower().replace(" ", "") == 'terminal':
+#        client.lazy.window.toggle_maximize()
+
 @hook.subscribe.startup_once
 def autostart():
     processes = [
-        ['sh', '.config/autostart.sh'],
+        ['sh', '.config/qtile/autostart.sh'],
         ['feh', '--bg-scale', '/home/zhawitche/.config/qtile/wallpapers/forest-fog.jpg'],
+        #For wayland
         ['swaybg', '-i', '/home/zhawitche/.config/qtile/wallpapers/forest-fog.jpg'],
     ]
 
