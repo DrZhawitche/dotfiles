@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 picom -b &
 volumeicon &
 /usr/bin/emacs --daemon &
-rm -f ~/.config/Webcord/windowstate.json
+nitrogen --restore
