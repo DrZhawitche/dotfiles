@@ -8,8 +8,6 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -68,7 +66,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.95
+  opacity: 0.86
 
   # Startup Mode (changes require restart)
   #
@@ -185,11 +183,11 @@ window:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
-  # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+colors:
+  #Default colors
+  primary:
+    background: '#23282c'
+    foreground: '#d3c6aa'
 
     # Bright and dim foreground colors
     #
@@ -281,26 +279,27 @@ window:
   #  background: CellForeground
 
   # Normal colors
-  #normal:
-  #  black:   '#293136'
-  #  red:     '#5c3f4f'
-  #  green:   '#48584e'
-  #  yellow:  '#dbbc5f'
-  #  blue:    '#3f5865'
-  #  magenta: '#d699b6'
-  #  cyan:    '#7fbbb3'
-  #  white:   '#d3c6aa'
+  normal:
+    black:   '0x475258'
+    red:     '0xe67e80'
+    green:   '0xa7c080'
+    yellow:  '0xdbbc7f'
+    blue:    '0x7fbbb3'
+    magenta: '0xd699b6'
+    cyan:    '0x83c092'
+    white:   '0xd3c6aa'
 
   # Bright colors
-  #bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
+  bright:
+    black:   '0x475258'
+    red:     '0xe67e80'
+    green:   '0xa7c080'
+    yellow:  '0xdbbc7f'
+    blue:    '0x7fbbb3'
+    magenta: '0xd699b6'
+    cyan:    '0x83c092'
+    white:   '0xd3c6aa'
+
 
   # Dim colors
   #
