@@ -1,4 +1,5 @@
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.local/bin/statusbar:$PATH"
 
 ### ALIASES ###
 
@@ -78,7 +79,7 @@ alias isoo="cat /etc/dev-rel"
 #Config aliases
 alias awesome-conf="cd ~/.config/awesome/ && ll"
 alias qtile-conf="cd ~/.config/qtile/ && ll"
-alias dwm-conf="cd ~/.config/dwm-6.4 && ll"
+alias dwm-conf="cd ~/.config/dwm && ll"
 alias zsh-conf="vim ~/.zshrc"
 alias bash-conf="vim ~/.bashrc"
 alias vim-conf="vim ~/.vimrc"
@@ -101,11 +102,17 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
-PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+
+PROMPT='%F{green}%B%n@%F{magenta}%m%f %B%F{248}%1~%f%b %# '
 
 #Plugins
 source ~/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Startup
 pfetch
+alias dwmblocks-conf='cd .config/dwmblocks && ll'
+alias fix-webcord="rm .config/WebCord/windowState.json"
+alias dmenu-conf="cd .config/dmenu && ll"
+alias untar="tar xpvf"
+alias :wq="exit"
