@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=ArcoLinux Simplicity
+Description=Simple SDDM theme
+Type=sddm-theme
+Author=Gabriel Ibáñez
+Copyright=(c) 2019, Gabriel Ibáñez
+Screenshot=screenshot.jpg
+License=GPL
+Version=1.0
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=arcolinux-simplicity
+Theme-API=2.0
+Website=https://gitlab.com/isseigx/simplicity-sddm-theme
+
