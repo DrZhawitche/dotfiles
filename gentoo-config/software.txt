@@ -1,0 +1,41 @@
+#X Server configuration
+x11-libs/libX11
+x11-base/xorg-drivers
+x11-base/xorg-server
+x11-libs/libXrandr
+x11-libs/libXinerama
+x11-libs/libXft
+x11-apps/xinit
+x11-apps/xrdb
+x11-apps/mesa-progs
+x11-apps/xrandr
+x11-drivers/xf86-video-vboxvideo
+x11-misc/unclutter-xfixes
+x11-misc/xclip
+x11-misc/pcmanfm
+x11-terms/rxvt-unicode
+x11-apps/xbacklight
+
+#Sddm
+x11-misc/sddm
+
+#Window managers
+x11-wm/awesome
+dev-python/pywlroots
+x11-base/xwayland
+
+#Applications
+x11-terms/alacritty
+www-client/firefox-bin
+
+#Terminal related
+x11-terms/alacritty
+app-shells/zsh
+
+#Text editors
+app-editors/vim
+app-editors/emacs
+
+#Other
+dev-vcs/git
+
