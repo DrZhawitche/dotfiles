@@ -1,10 +1,10 @@
 #+title: DrZhawitche's dotfiles
 
 * Table of contents :toc_3:
-- [[#my-window-manager-configs][My window manager configs]]
-- [[#other-configs][Other configs]]
+- [[#window-manager-configs][My window manager configs]]
+- [[#other-configs][My other configs]]
 
-* My window manager configs
+* Window manager configs
 | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/qtile][Qtile]] | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/dwm][Dwm]] |
 
 * Other configs
