@@ -1,0 +1,3 @@
+#+title: DrZhawitche's qtile config
+
+[[https://github.com/DrZhawitche/dotfiles/blob/main/.screenshots/qtile.png]]
