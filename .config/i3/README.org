@@ -1,0 +1,3 @@
+#+title: DrZhawitche's i3 config
+
+[[https://github.com/DrZhawitche/dotfiles/blob/main/.screenshots/i3.png]]
