@@ -1,0 +1,78 @@
+#!/bin/sh
+
+#Use sudo if needed, credits to Luke Smith
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+export \
+		PAGER="less" \
+		EDITOR="vim" \
+
+#Pacman 
+alias \
+		sps='sudo pacman -S' \
+		spr='sudo pacman -R' \
+		sprs='sudo pacman -Rs' \
+		sprdd='sudo pacman -Rdd' \
+		spqo='sudo pacman -Qo' \
+		spsii='sudo pacman -Sii' \
+		cleanup='sudo pacman -Rns $(pacman -Qtdq)' \
+	    list="sudo pacman -Qqe" \
+		listt="sudo pacman -Qqet" \
+		listaur="sudo pacman -Qqem" \
+		udpate='sudo pacman -Syyu' \
+		upate='sudo pacman -Syyu' \
+		updte='sudo pacman -Syyu' \
+		updqte='sudo pacman -Syyu' \
+		update='sudo pacman -Syyu' \
+
+#List
+alias \
+		ls='ls --color=auto' \
+		la='ls -a' \
+		ll='ls -alFh ' \
+		l='ls' \
+		l.="ls -A | grep -E '^\.'" \
+		listdir="ls -d */ > list" \
+
+#Mirror rating
+alias \
+		mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" \
+		mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist" \
+		mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist" \
+		mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist" \
+		mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist" \
+		mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist" \
+		ram='rate-mirrors --allow-root --disable-comments arch | sudo tee /etc/pacman.d/mirrorlist' \
+		rams='rate-mirrors --allow-root --disable-comments --protocol https arch  | sudo tee /etc/pacman.d/mirrorlist' \
+
+#Config 
+alias \
+		awesomeconf="cd ~/.config/awesome/ && ll" \
+		qtileconf="cd ~/.config/qtile/ && ll" \
+		dwmconf="cd ~/.config/dwm && ll" \
+		zshconf="vim ~/.zshrc" \
+		bashconf="vim ~/.bashrc" \
+		vimconf="vim ~/.vimrc" \
+		bashconf="vim ~/.bashrc" \
+		dwmblocksconf='cd .config/dwmblocks && ll' \
+		dmenuconf="cd .config/dmenu && ll" \
+
+#Miscellaneous
+alias \
+		fixwebcord="rm .config/WebCord/windowState.json" \
+		cd..='cd ..' \
+		pdw='pwd' \
+		emacs="emacsclient -c -a 'emacs'" \
+		cd..='cd ..' \
+		pdw='pwd' \
+		untar="tar xpvf" \
+		:wq="exit" \
+		picom="picom --experimental-backends" \
+		dmenu="dmenu_run -sb #a7c080 -nb #343f44 -p Launch: -fn Cantarell" \
+
+#Shorthand
+alias \
+		v="$EDITOR" \
+		make="make -j12 -l12" \
