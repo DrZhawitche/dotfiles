@@ -9,4 +9,4 @@
 
 * Other configs
 | [[p][Alacritty]] | [[https://github.com/DrZhawitche/dotfiles/blob/main/.config/bash][Bash]] | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/dmenu][Dmenu]] | [[.config/picom-jonaburg][Picom]] |
-| [[https://github.com/DrZhawitche/dotfiles/blob/main/.config/zsh][Zsh]]       | [[https://github.com/DrZhawitche/dotfiles/blob/main/.vimrc][Vim]]  |       |       |
+| [[https://github.com/DrZhawitche/dotfiles/blob/main/.config/zsh][Zsh]]       | [[https://github.com/DrZhawitche/dotfiles/blob/main/.config/vim][Vim]]  |       |       |
