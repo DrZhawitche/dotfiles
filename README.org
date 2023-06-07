@@ -8,5 +8,5 @@
 | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/qtile][Qtile]] | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/dwm][Dwm]] | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/i3][i3]]
 
 * Other configs
-| [[p][Alacritty]] | [[https://github.com/DrZhawitche/dotfiles/blob/main/.bashrc][Bash]] | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/dmenu][Dmenu]] | [[p][Picom]] |
+| [[p][Alacritty]] | [[https://github.com/DrZhawitche/dotfiles/blob/main/.config/bash][Bash]] | [[https://github.com/DrZhawitche/dotfiles/tree/main/.config/dmenu][Dmenu]] | [[p][Picom]] |
 | [[https://github.com/DrZhawitche/dotfiles/blob/main/.zshrc][Zsh]]       | [[https://github.com/DrZhawitche/dotfiles/blob/main/.vimrc][Vim]]  |       |       |
