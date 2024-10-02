@@ -112,10 +112,8 @@ keys = [
     Key([mod, "shift"], "w", lazy.spawn(browser2), desc="Open librewolf"),
     Key([mod, "shift"], "m", lazy.spawn("deadbeef"), desc="Open deadbeef"),
     Key([mod, "shift"], "d", lazy.spawn("webcord"), desc="Open discord"),
-    Key([mod], "t", lazy.spawn("sleep 0.1 && xdotool key thorn", shell=True), desc="Type minuscule thorn"),
-    Key(["mod1"], "bracketleft", lazy.spawn("sleep 0.1 && xdotool key thorn", shell=True), desc="Type majuscule thorn"),
-    Key([mod], "r", lazy.spawn('sleep 0.1 && xdotool type "ƿ"', shell=True), desc="Type majuscule thorn"),
     Key([], "Print", lazy.spawn("flatpak run org.flameshot.Flameshot"), desc="Launch flameshot"),
+    Key([ "shift" ], "Escape", lazy.spawn("systemctl suspend"), desc="Suspend the system"),
     #KeyChords
     KeyChord([mod], "e", [
         Key([], "e", lazy.spawn("element-desktop")),
@@ -125,12 +123,6 @@ keys = [
         Key([], "s", lazy.spawn("surf")),
 
     ]),
-
-    #Special Characters, W.I.P.
-    KeyChord([mod], "c", [
-        Key([], "t", lazy.spawn("xclip -selection clipboard .local/share/chars/thorn-small.txt")),
-        Key([], "T", lazy.spawn("xclip -selection clipboard .local/share/chars/thorn-big.txt")),
-    ])
 ]
 groups = [Group("", layout='columns'),
           Group("", layout='columns'),
